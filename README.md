@@ -13,3 +13,14 @@ My idea was to implement authentication, security configurations, and tests for 
 Originally, I planned to deploy it on Azure using Azure Container Apps, but I wasn't able to get it running and synchronize the containers with the proper configurations in time.
 
 ![azure_img](/azure_dpl.png)
+
+## How to run it
+
+Required Docker installed.
+
+```bash
+docker-compose up
+```
+
+Then browse to access API docs: localhost:8000/docs
+
