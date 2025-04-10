@@ -1,6 +1,6 @@
 from sqlalchemy import Integer, String, Float, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column
-from database import Base
+from database.database import Base
 
 
 class Department(Base):
@@ -20,5 +20,5 @@ class HiredEmployees(Base):
     datetime  = mapped_column(String)
     department_id = mapped_column(Integer)
     job_id = mapped_column(Integer)
-    # department_id = mapped_column(Integer, ForeignKey("departments.id"))
-    # job_id = mapped_column(Integer, ForeignKey("jobs.id"))
+
+

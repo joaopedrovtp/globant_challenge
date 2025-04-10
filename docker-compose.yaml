@@ -1,5 +1,6 @@
+
 services:
-  globant_database:
+  globant-database:
     image: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
@@ -10,16 +11,16 @@ services:
     ports:
       - "5432:5432"
 
-  globant_app:
-    image: globant_app
-    # entrypoint: ./entrypoint.sh
+  globant-app:
+    image: globant_app #globant_app
     build: .
     ports:
       - "8000:8000"
     depends_on:
-      - globant_database
+      - globant-database
     environment:
-      DATABASE_URL: postgresql+asyncpg://postgres:admin@globant_database:5432/globant
+      DATABASE_URL: postgresql+asyncpg://postgres:admin@globant-database:5432/globant
+
 
 volumes:
   pgdata:
