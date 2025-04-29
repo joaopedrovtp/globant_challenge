@@ -1,23 +1,15 @@
-from pydantic_settings import BaseSettings
-import os
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
 
 class Settings(BaseSettings):
-    """
-    Configurações gerais usadas na aplicação
-    """
-    # Database URL
-    # DB_URL: str = "postgresql+asyncpg://postgres:admin@localhost:5432/globant"
-    DB_URL: str = os.getenv("DATABASE_URL", "postgresql+asyncpg://postgres:admin@localhost:5432/globant")
+    model_config = SettingsConfigDict(
+        env_file='.env', env_file_encoding='utf-8'
+    )
 
-    
-    # Configs S3
-    AWS_ACCESS_KEY: str = 'AKIA22JI76RHFKZO625S' 
-    AWS_SECRET_KEY: str  = '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'
-    BUCKET_NAME: str  = 'globant.bucket.case'
-
-
-    class Config:
-        case_sensitive = True
+    DATABASE_URL: str
+    AWS_ACCESS_KEY: str
+    AWS_SECRET_KEY: str
+    BUCKET_NAME: str
 
 
 settings = Settings()
