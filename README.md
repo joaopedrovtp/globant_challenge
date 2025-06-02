@@ -10,7 +10,7 @@ My architectural intention for this challenge was to implement an ETL process us
 
 My idea was to implement authentication, security configurations, and tests for the application's methods.
 
-Finally, I deloyed it on Azure using Azure Container Apps.
+Finally, I deployed it on Azure using Azure Container Apps.
 
 ![azure_img](/azure_dpl.png)
 
