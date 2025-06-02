@@ -1,4 +1,4 @@
-# Globant's Data Engineer Challenge
+# Building a REST API for ETL using FastAPI, S3 and Postgres
 
 ## Architecture
 
